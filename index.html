@@ -10,6 +10,22 @@
     
       gtag('config', 'G-WHH8TG43E9');
     </script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const source = params.get("utm_source");
+      const medium = params.get("utm_medium");
+      const campaign = params.get("utm_campaign");
+      const content = params.get("utm_content");
+    
+      if (source && medium) {
+        gtag('config', 'G-WHH8TG43E9', {
+          campaign_source: source,
+          campaign_medium: medium,
+          campaign_name: campaign,
+          campaign_content: content
+        });
+      }
+    </script>
 
     
     <meta charset="UTF-8">
